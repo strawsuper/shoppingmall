@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <loginview.h>
+#include <userview.h>
+#include <user.h>
+#include <registerview.h>
 namespace Ui {
 class MainWindow;
 }
@@ -20,9 +23,16 @@ private slots:
 
     void on_action_3_triggered();
 
+    void on_action_4_triggered();
+
+    void on_action_2_triggered();
+
 private:
     Ui::MainWindow *ui;
     LoginView *loginview;
+    userview* uv;
+    User *user;
+    RegisterView* rv;
 };
 
 #endif // MAINWINDOW_H

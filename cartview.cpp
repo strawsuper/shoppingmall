@@ -5,6 +5,7 @@ CartView::CartView(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CartView)
 {
+    //ui->listview->model()->insertRow(0);
     ui->setupUi(this);
 }
 

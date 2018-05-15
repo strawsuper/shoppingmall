@@ -33,7 +33,9 @@ SOURCES += \
     user.cpp \
     order.cpp \
     cart.cpp \
-    cartview.cpp
+    cartview.cpp \
+    userview.cpp \
+    registerview.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,9 +44,13 @@ HEADERS += \
     user.h \
     order.h \
     cart.h \
-    cartview.h
+    cartview.h \
+    userview.h \
+    registerview.h
 
 FORMS += \
         mainwindow.ui \
     loginview.ui \
-    cartview.ui
+    cartview.ui \
+    userview.ui \
+    registerview.ui

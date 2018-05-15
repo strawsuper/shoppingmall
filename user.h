@@ -4,9 +4,10 @@
 #include <shopnetwork.h>
 #include <QString>
 #include <QtNetwork>
-class User
+class User:public QObject
 {
 private:
+    int phone;
     int userid;
     int password;
     QString nickname;
@@ -14,6 +15,7 @@ private:
     int age;
     ShopNetwork* sn;
 public:
+    int getphone(){return phone;}
     int getuserid(){return userid;}
     int getpassword(){return password;}
     QString getnickname(){return nickname;}
@@ -24,11 +26,16 @@ public:
     void setpassword(int password){this->password=password;}
     void setnickname(QString nickname){this->nickname=nickname;}
     void setage(int age){this->age=age;}
+    void setphone(int phone){this->phone=phone;}
     User();
     User(int userid,int password,QString nickname="",bool sex=1,int age=0);
     void getUserFromNet();
     void sentUserToNet();
-    bool login();
+    void login();
+    void uregister();
+public slots:
+    void handleEndOfLoginRequest(QNetworkReply* QNR);
+    void handleEndOfRegisterRequest(QNetworkReply* reply);
 };
 
 #endif // USER_H

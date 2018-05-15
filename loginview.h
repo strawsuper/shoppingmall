@@ -12,7 +12,7 @@ class LoginView : public QWidget
     Q_OBJECT
 
 public:
-    explicit LoginView(QWidget *parent = 0);
+    explicit LoginView(User *user,QWidget *parent = 0);
     ~LoginView();
 
 private slots:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginView</class>
- <widget class="QWidget" name="LoginView">
+ <class>RegisterView</class>
+ <widget class="QWidget" name="RegisterView">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -69,7 +69,7 @@
        </size>
       </property>
       <property name="text">
-       <string>登录</string>
+       <string>注册</string>
       </property>
      </widget>
     </item>
@@ -93,7 +93,7 @@
     </property>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>手机号：  </string>
+      <string>手机号码：  </string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit"/>

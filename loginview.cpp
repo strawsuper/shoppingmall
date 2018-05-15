@@ -1,8 +1,8 @@
 #include "loginview.h"
 #include "ui_loginview.h"
 #include <QString>
-LoginView::LoginView(QWidget *parent) :
-    QWidget(parent),
+LoginView::LoginView(User *user,QWidget *parent) :
+    loginuser(user),QWidget(parent),
     ui(new Ui::LoginView)
 {
     ui->setupUi(this);
@@ -15,8 +15,9 @@ LoginView::~LoginView()
 
 void LoginView::on_pushButton_2_clicked()
 {
-    int userid=ui->lineEdit->text();
-    int password=ui->lineEdit_2->text();
-    loginuser=new user(userid,password);
+    int phone=ui->lineEdit->text().toInt();
+    int password=ui->lineEdit_2->text().toInt();
+    loginuser->setphone(phone);
+    loginuser->setpassword(password);
     loginuser->login();
 }

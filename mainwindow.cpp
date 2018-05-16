@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     user=new User();
     ui->setupUi(this);
 }
@@ -25,7 +26,8 @@ void MainWindow::on_action_triggered()
 
 void MainWindow::on_action_3_triggered()
 {
-
+    cv=new CartView(user->getcart());
+    cv->show();
 }
 
 void MainWindow::on_action_4_triggered()

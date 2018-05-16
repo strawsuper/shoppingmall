@@ -15,6 +15,9 @@ public:
     explicit userview(User *user,QWidget *parent = 0);
     ~userview();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::userview *ui;
 };

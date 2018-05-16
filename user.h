@@ -4,7 +4,9 @@
 #include <shopnetwork.h>
 #include <QString>
 #include <QtNetwork>
-class User:public QObject
+#include <cart.h>
+#include <urlglobal.h>
+class User
 {
 private:
     int phone;
@@ -13,6 +15,8 @@ private:
     QString nickname;
     bool sex;
     int age;
+    Cart *cart;
+    int cartid;
     ShopNetwork* sn;
 public:
     int getphone(){return phone;}
@@ -27,12 +31,13 @@ public:
     void setnickname(QString nickname){this->nickname=nickname;}
     void setage(int age){this->age=age;}
     void setphone(int phone){this->phone=phone;}
+    Cart* getcart(){return cart;}
     User();
     User(int userid,int password,QString nickname="",bool sex=1,int age=0);
     void getUserFromNet();
     void sentUserToNet();
-    void login();
-    void uregister();
+    bool login();
+    bool uregister();
 public slots:
     void handleEndOfLoginRequest(QNetworkReply* QNR);
     void handleEndOfRegisterRequest(QNetworkReply* reply);

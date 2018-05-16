@@ -6,6 +6,8 @@
 #include <userview.h>
 #include <user.h>
 #include <registerview.h>
+#include <cart.h>
+#include <cartview.h>
 namespace Ui {
 class MainWindow;
 }
@@ -33,6 +35,8 @@ private:
     userview* uv;
     User *user;
     RegisterView* rv;
+//    Cart *cart;
+    CartView * cv;
 };
 
 #endif // MAINWINDOW_H

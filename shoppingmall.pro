@@ -35,7 +35,10 @@ SOURCES += \
     cart.cpp \
     cartview.cpp \
     userview.cpp \
-    registerview.cpp
+    registerview.cpp \
+    urlglobal.cpp \
+    test.cpp \
+    testobject.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +49,10 @@ HEADERS += \
     cart.h \
     cartview.h \
     userview.h \
-    registerview.h
+    registerview.h \
+    urlglobal.h \
+    test.h \
+    testobject.h
 
 FORMS += \
         mainwindow.ui \

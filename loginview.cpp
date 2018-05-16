@@ -19,5 +19,12 @@ void LoginView::on_pushButton_2_clicked()
     int password=ui->lineEdit_2->text().toInt();
     loginuser->setphone(phone);
     loginuser->setpassword(password);
-    loginuser->login();
+    bool loginsuccess=loginuser->login();
+    if(loginsuccess){
+
+    }
+    else
+    {
+
+    }
 }

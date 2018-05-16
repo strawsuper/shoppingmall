@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <QDate>
+#include <urlglobal.h>
 class Order
 {
 private:
